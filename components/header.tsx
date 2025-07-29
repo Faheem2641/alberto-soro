@@ -44,20 +44,22 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-center relative">
+        <div className="flex h-16 items-center relative w-full">
           {/* Centered Logo and brand */}
-          <Link href="/" className="flex items-center gap-3 absolute left-1/2 transform -translate-x-1/2">
-            <Image
-              src="/images/goodnite-removebg-preview.png"
-              alt="Alberto Sora Logo"
-              width={56}
-              height={56}
-              className="object-contain"
-            />
-            <span className="text-2xl font-bold text-gray-900">Alberto Sora</span>
-          </Link>
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/images/goodnite-removebg-preview.png"
+                alt="Alberto Sora Logo"
+                width={56}
+                height={56} 
+                className="object-contain"
+              />
+              <span className="text-2xl font-bold text-gray-900">Alberto Sora</span>
+            </Link>
+          </div>
           {/* Right side icons */}
-          <div className="flex items-center gap-4 absolute right-0">
+          <div className="flex items-center gap-0 ml-auto">
             {isSearchOpen ? (
               <form onSubmit={handleSearch} className="flex items-center gap-2">
                 <Input

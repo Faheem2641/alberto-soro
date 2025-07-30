@@ -307,7 +307,7 @@ export default function CheckoutPage() {
               </Card>
 
               {/* Security Notice */}
-              <Card className="bg-gray-50">
+              <Card className="bg-white border border-gray-200">
                 <CardContent className="p-4">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
                     <div className="text-green-600">🔒</div>

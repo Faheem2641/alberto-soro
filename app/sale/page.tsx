@@ -43,7 +43,7 @@ export default function SalePage() {
             </Card>
 
             {/* Newsletter Signup for Sale Notifications */}
-            <Card className="bg-gray-50">
+            <Card className="bg-white border border-gray-200">
               <CardContent className="p-8">
                 <div className="text-center space-y-4">
                   <h3 className="text-xl font-semibold text-gray-900">Be the First to Know</h3>

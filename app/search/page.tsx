@@ -235,7 +235,7 @@ function SearchResults() {
                       width={400}
                       height={400}
                       className={`w-full group-hover:scale-105 transition-transform duration-300 ${
-                        product.type === "accessory" ? "h-64 object-contain" : "h-80 object-cover"
+                        product.type === "accessory" ? "h-64 object-contain" : "h-64 sm:h-80 object-contain sm:object-cover"
                       }`}
                     />
                   </div>

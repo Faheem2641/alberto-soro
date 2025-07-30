@@ -148,7 +148,7 @@ export default function HandbagsPage() {
                         alt={product.name}
                         width={400}
                         height={400}
-                        className="w-full h-64 object-cover rounded-t-lg"
+                        className="w-full h-64 sm:h-80 object-contain sm:object-cover rounded-t-lg"
                       />
                       <p className="text-sm text-gray-600 mt-2">{product.description}</p>
                       <p className="text-lg font-bold text-gray-900">{product.price}</p>
@@ -167,7 +167,7 @@ export default function HandbagsPage() {
           </section>
 
           {/* Call to Action */}
-          <section className="mt-16 text-center bg-gray-50 rounded-lg p-12">
+          <section className="mt-16 text-center bg-white border border-gray-200 rounded-lg p-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Can't Find What You're Looking For?</h3>
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Our collection is constantly evolving. Subscribe to our newsletter to be the first to know about new

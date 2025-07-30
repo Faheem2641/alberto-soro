@@ -96,36 +96,44 @@ export function FeaturedProducts() {
   }
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-12 sm:py-16 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Products</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Featured Products</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             Explore our complete collection of handbags, carefully selected for their exceptional quality and timeless
             design.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-8">
           {products.map((product) => (
-            <Card key={product.id} className="group cursor-pointer border-0 shadow-none">
+            <Card key={product.id} className="group cursor-pointer border-0 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-xl overflow-hidden">
               <CardContent className="p-0">
-                <div className="relative overflow-hidden rounded-lg mb-4">
-                  {/* Removed product badge/tab from image */}
+                <div className="relative overflow-hidden">
+                  {product.badge && (
+                    <span className="absolute top-3 left-3 z-10 px-2 py-1 text-xs font-medium rounded-full text-white bg-black">
+                      {product.badge}
+                    </span>
+                  )}
                   <Image
                     src={product.image || "/placeholder.svg"}
                     alt={product.name}
                     width={400}
                     height={400}
-                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-64 sm:h-80 object-contain sm:object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="space-y-2">
-                  <h3 className="font-semibold text-gray-900 group-hover:text-gray-600 transition-colors">
+                <div className="p-4 space-y-3">
+                  <h3 className="font-semibold text-gray-900 group-hover:text-gray-600 transition-colors text-base sm:text-lg">
                     {product.name}
                   </h3>
                   <p className="text-lg font-bold text-gray-900">{product.price}</p>
-                  <Button variant="outline" className="w-full bg-transparent" onClick={() => handleAddToCart(product)}>
+                  <Button 
+                    variant="outline" 
+                    className="w-full bg-transparent hover:bg-black hover:text-white transition-colors h-10 rounded-lg"
+                    onClick={() => handleAddToCart(product)}
+                  >
                     Add to Cart
                   </Button>
                 </div>

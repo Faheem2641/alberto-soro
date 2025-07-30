@@ -115,7 +115,7 @@ export default function AccessoriesPage() {
           </div>
 
           {/* Features Section */}
-          <section className="bg-gray-50 rounded-lg p-12">
+          <section className="bg-white border border-gray-200 rounded-lg p-12">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Accessories?</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">

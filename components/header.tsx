@@ -45,21 +45,25 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center relative w-full">
-          {/* Centered Logo and brand */}
-          <div className="absolute left-1/2 transform -translate-x-1/2">
-            <Link href="/" className="flex items-center gap-3">
+          {/* Centered Logo and brand (centered on desktop, left on mobile) */}
+          <div className="flex-1 flex justify-center md:justify-center">
+            <Link
+              href="/"
+              className="flex items-center gap-2 md:gap-3"
+              style={{ minWidth: 0 }}
+            >
               <Image
                 src="/images/goodnite-removebg-preview.png"
                 alt="Alberto Sora Logo"
-                width={56}
-                height={56} 
-                className="object-contain"
+                width={40}
+                height={40}
+                className="object-contain md:w-14 md:h-14"
               />
-              <span className="text-2xl font-bold text-gray-900">Alberto Sora</span>
+              <span className="text-base md:text-2xl font-bold text-gray-900 whitespace-nowrap">Alberto Sora</span>
             </Link>
           </div>
-          {/* Right side icons */}
-          <div className="flex items-center gap-0 ml-auto">
+          {/* Right side icons - always at far right */}
+          <div className="flex items-center gap-0 flex-shrink-0 absolute right-0 top-1/2 -translate-y-1/2">
             {isSearchOpen ? (
               <form onSubmit={handleSearch} className="flex items-center gap-2">
                 <Input

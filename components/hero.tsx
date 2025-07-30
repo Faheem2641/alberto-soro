@@ -32,13 +32,13 @@ export function Hero() {
               </Link>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative flex items-end h-[400px] sm:h-[500px]">
             <Image
               src="/images/tan-leather-handbag.jpg"
               alt="Featured luxury leather handbag in tan"
               width={500}
               height={600}
-              className="w-full h-auto object-cover rounded-lg"
+              className="w-full h-full object-cover object-bottom rounded-lg"
             />
           </div>
         </div>

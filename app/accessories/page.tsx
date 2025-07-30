@@ -81,13 +81,13 @@ export default function AccessoriesPage() {
                 className="group cursor-pointer border-0 shadow-lg hover:shadow-xl transition-shadow"
               >
                 <CardContent className="p-0">
-                  <div className="relative overflow-hidden rounded-t-lg">
+                  <div className="relative overflow-hidden rounded-t-lg flex justify-center items-center bg-white" style={{height: '16rem'}}>
                     <Image
                       src={accessory.image || "/placeholder.svg"}
                       alt={accessory.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-300 rounded-t-lg bg-white"
+                      width={220}
+                      height={220}
+                      className="object-contain max-h-full max-w-full group-hover:scale-105 transition-transform duration-300 rounded-t-lg"
                     />
                   </div>
                   <div className="p-6 space-y-3">
